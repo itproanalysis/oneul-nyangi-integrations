@@ -1,0 +1,11 @@
+{
+  "name": "oneul-nyangi",
+  "version": "0.7.0",
+  "description": "Real cat photos, diaries and reference calculators",
+  "author": {
+    "name": "GUNWOO KIM",
+    "url": "https://nyangi.today/about"
+  },
+  "license": "MIT",
+  "mcpServers": "./.mcp.json"
+}

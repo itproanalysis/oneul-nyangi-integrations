@@ -1,0 +1,4 @@
+mcpServers:
+  oneul-nyangi:
+    type: streamable-http
+    url: https://nyangi.today/mcp

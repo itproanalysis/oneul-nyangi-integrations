@@ -1,0 +1,13 @@
+{
+  "name": "oneul-nyangi-plugins",
+  "owner": {
+    "name": "GUNWOO KIM"
+  },
+  "plugins": [
+    {
+      "name": "oneul-nyangi",
+      "source": "./",
+      "description": "Real public cat photos, diaries and reference calculators"
+    }
+  ]
+}

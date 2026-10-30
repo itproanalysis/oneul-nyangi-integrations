@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "oneul-nyangi": {
+      "type": "http",
+      "url": "https://nyangi.today/mcp"
+    }
+  }
+}

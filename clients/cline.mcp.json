@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "oneul-nyangi": {
+      "type": "streamableHttp",
+      "url": "https://nyangi.today/mcp",
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}

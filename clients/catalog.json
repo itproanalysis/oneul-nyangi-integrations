@@ -1,0 +1,280 @@
+{
+  "bundleVersion": "1.0.0",
+  "mcpVersion": "0.7.0",
+  "checkedAt": "2026-10-30",
+  "endpoint": "https://nyangi.today/mcp",
+  "toolNames": [
+    "show_cat_photos",
+    "search_public_content",
+    "get_public_post",
+    "get_cat_profile",
+    "calculate_cat_age",
+    "estimate_cat_food",
+    "list_cat_breeds"
+  ],
+  "scope": "public-read-only",
+  "accountConnectionsVerified": false,
+  "clients": [
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "group": "editors",
+      "docs": "https://prod.cursor.com/docs/mcp/install-links",
+      "filename": "cursor.mcp.json",
+      "content": "{\n  \"mcpServers\": {\n    \"oneul-nyangi\": {\n      \"url\": \"https://nyangi.today/mcp\"\n    }\n  }\n}\n",
+      "steps": [
+        "간편 설치를 누르고 Cursor의 추가 화면에서 확인하세요.",
+        "또는 ~/.cursor/mcp.json의 mcpServers에 oneul-nyangi 항목을 합치세요."
+      ],
+      "downloadUrl": "https://nyangi.today/connect/clients/cursor.mcp.json"
+    },
+    {
+      "id": "vscode",
+      "name": "VS Code · Copilot",
+      "group": "editors",
+      "docs": "https://code.visualstudio.com/docs/agents/reference/mcp-configuration",
+      "filename": "vscode.mcp.json",
+      "content": "{\n  \"servers\": {\n    \"oneul-nyangi\": {\n      \"type\": \"http\",\n      \"url\": \"https://nyangi.today/mcp\"\n    }\n  }\n}\n",
+      "steps": [
+        "명령 팔레트에서 MCP: Open User Configuration을 여세요.",
+        "servers에 oneul-nyangi를 합치고 서버 시작·신뢰 확인을 진행하세요."
+      ],
+      "downloadUrl": "https://nyangi.today/connect/clients/vscode.mcp.json"
+    },
+    {
+      "id": "cline",
+      "name": "Cline",
+      "group": "editors",
+      "docs": "https://docs.cline.bot/mcp/mcp-overview",
+      "filename": "cline.mcp.json",
+      "content": "{\n  \"mcpServers\": {\n    \"oneul-nyangi\": {\n      \"type\": \"streamableHttp\",\n      \"url\": \"https://nyangi.today/mcp\",\n      \"disabled\": false,\n      \"autoApprove\": []\n    }\n  }\n}\n",
+      "steps": [
+        "MCP Servers → Configure에서 설정 파일을 여세요.",
+        "mcpServers의 oneul-nyangi를 합치세요. Streamable HTTP를 사용합니다."
+      ],
+      "downloadUrl": "https://nyangi.today/connect/clients/cline.mcp.json"
+    },
+    {
+      "id": "roo",
+      "name": "Roo Code",
+      "group": "editors",
+      "docs": "https://roocodeinc.github.io/Roo-Code/features/mcp/using-mcp-in-roo/",
+      "filename": "roo.mcp.json",
+      "content": "{\n  \"mcpServers\": {\n    \"oneul-nyangi\": {\n      \"type\": \"streamable-http\",\n      \"url\": \"https://nyangi.today/mcp\",\n      \"disabled\": false\n    }\n  }\n}\n",
+      "steps": [
+        "MCP → Edit Global MCP를 여세요.",
+        "mcpServers에 oneul-nyangi를 합치세요. 자동 승인 설정은 바꾸지 않습니다."
+      ],
+      "downloadUrl": "https://nyangi.today/connect/clients/roo.mcp.json"
+    },
+    {
+      "id": "continue",
+      "name": "Continue",
+      "group": "editors",
+      "docs": "https://docs.continue.dev/customize/deep-dives/mcp",
+      "filename": "continue.yaml",
+      "content": "name: Oneul Nyangi\nversion: 1.1.0\nschema: v1\nmcpServers:\n  - name: oneul-nyangi\n    type: streamable-http\n    url: https://nyangi.today/mcp\n",
+      "steps": [
+        "프로젝트의 .continue/mcpServers/oneul-nyangi.yaml로 저장하세요.",
+        "Continue Agent 모드에서 oneul-nyangi 도구를 활성화하세요."
+      ],
+      "downloadUrl": "https://nyangi.today/connect/clients/continue.yaml"
+    },
+    {
+      "id": "kiro",
+      "name": "Kiro",
+      "group": "editors",
+      "docs": "https://kiro.dev/docs/mcp/configuration/",
+      "filename": "kiro.mcp.json",
+      "content": "{\n  \"mcpServers\": {\n    \"oneul-nyangi\": {\n      \"url\": \"https://nyangi.today/mcp\"\n    }\n  }\n}\n",
+      "steps": [
+        "~/.kiro/settings/mcp.json의 mcpServers에 oneul-nyangi를 합치세요.",
+        "설치 버전의 MCP 설정에서 연결 상태를 확인하세요."
+      ],
+      "downloadUrl": "https://nyangi.today/connect/clients/kiro.mcp.json"
+    },
+    {
+      "id": "antigravity",
+      "name": "Google Antigravity",
+      "group": "editors",
+      "docs": "https://antigravity.google/docs/mcp",
+      "filename": "antigravity.mcp.json",
+      "content": "{\n  \"mcpServers\": {\n    \"oneul-nyangi\": {\n      \"serverUrl\": \"https://nyangi.today/mcp\"\n    }\n  }\n}\n",
+      "steps": [
+        "MCP Servers → Manage MCP Servers → View raw config를 여세요.",
+        "mcpServers에 oneul-nyangi를 합치세요. 현재 문서의 전역 경로는 ~/.gemini/config/mcp_config.json입니다."
+      ],
+      "downloadUrl": "https://nyangi.today/connect/clients/antigravity.mcp.json"
+    },
+    {
+      "id": "opencode",
+      "name": "OpenCode V2",
+      "group": "editors",
+      "docs": "https://opencode.ai/v2/docs/mcp-servers",
+      "filename": "opencode-v2.json",
+      "content": "{\n  \"$schema\": \"https://opencode.ai/config.json\",\n  \"mcp\": {\n    \"servers\": {\n      \"oneul-nyangi\": {\n        \"type\": \"remote\",\n        \"url\": \"https://nyangi.today/mcp\"\n      }\n    }\n  }\n}\n",
+      "steps": [
+        "OpenCode V2의 opencode.json에서 mcp.servers에 oneul-nyangi를 합치세요.",
+        "V1은 별도 opencode-v1.json을 사용하세요. 두 버전의 구조가 다릅니다."
+      ],
+      "downloadUrl": "https://nyangi.today/connect/clients/opencode-v2.json"
+    },
+    {
+      "id": "lmstudio",
+      "name": "LM Studio",
+      "group": "chat",
+      "docs": "https://lmstudio.ai/docs/app/mcp/deeplink",
+      "filename": "lmstudio.mcp.json",
+      "content": "{\n  \"mcpServers\": {\n    \"oneul-nyangi\": {\n      \"url\": \"https://nyangi.today/mcp\"\n    }\n  }\n}\n",
+      "steps": [
+        "간편 설치를 누르고 LM Studio에서 추가를 확인하세요.",
+        "도구 호출을 지원하는 모델과 함께 사용하세요."
+      ],
+      "prerequisite": "MCP 호스트 지원 버전과 도구 호출 가능한 모델",
+      "downloadUrl": "https://nyangi.today/connect/clients/lmstudio.mcp.json"
+    },
+    {
+      "id": "cherry",
+      "name": "Cherry Studio",
+      "group": "chat",
+      "docs": "https://docs.cherryai.com.cn/advanced-basic/extensions/mcp",
+      "filename": "cherry.mcp.json",
+      "content": "{\n  \"mcpServers\": {\n    \"oneul-nyangi\": {\n      \"type\": \"streamableHttp\",\n      \"url\": \"https://nyangi.today/mcp\"\n    }\n  }\n}\n",
+      "steps": [
+        "설정 → MCP → 서버 추가에서 JSON을 가져오세요.",
+        "연결 방식을 Streamable HTTP로 확인하고 사용할 Agent에 oneul-nyangi를 연결하세요."
+      ],
+      "downloadUrl": "https://nyangi.today/connect/clients/cherry.mcp.json"
+    },
+    {
+      "id": "librechat",
+      "name": "LibreChat",
+      "group": "chat",
+      "docs": "https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/mcp_servers",
+      "filename": "librechat.yaml",
+      "content": "mcpServers:\n  oneul-nyangi:\n    type: streamable-http\n    url: https://nyangi.today/mcp\n",
+      "steps": [
+        "관리하는 librechat.yaml의 mcpServers에 oneul-nyangi를 합치세요.",
+        "설정을 반영한 뒤 대화의 도구 메뉴나 Agent에서 oneul-nyangi를 선택하세요."
+      ],
+      "prerequisite": "LibreChat 인스턴스 설정 권한",
+      "downloadUrl": "https://nyangi.today/connect/clients/librechat.yaml"
+    },
+    {
+      "id": "anythingllm",
+      "name": "AnythingLLM",
+      "group": "chat",
+      "docs": "https://docs.anythingllm.com/mcp-compatibility/overview",
+      "filename": "anythingllm.mcp.json",
+      "steps": [
+        "Agent Skills의 MCP 설정에서 설정 파일을 여세요.",
+        "mcpServers에 oneul-nyangi를 합치세요. AnythingLLM의 Streamable HTTP 형식은 type: streamable입니다."
+      ],
+      "content": "{\n  \"mcpServers\": {\n    \"oneul-nyangi\": {\n      \"type\": \"streamable\",\n      \"url\": \"https://nyangi.today/mcp\"\n    }\n  }\n}\n",
+      "downloadUrl": "https://nyangi.today/connect/clients/anythingllm.mcp.json"
+    },
+    {
+      "id": "claude-desktop",
+      "name": "Claude Desktop · stdio 호환",
+      "group": "chat",
+      "docs": "https://github.com/punkpeye/mcp-remote",
+      "filename": "stdio.mcp.json",
+      "content": "{\n  \"mcpServers\": {\n    \"oneul-nyangi\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"mcp-remote@0.15.2\",\n        \"https://nyangi.today/mcp\",\n        \"--transport\",\n        \"http-only\"\n      ]\n    }\n  }\n}\n",
+      "steps": [
+        "원격 서버 직접 연결을 지원하면 공통 MCP 주소를 먼저 사용하세요.",
+        "stdio만 지원하는 버전은 Developer → Edit Config에 이 설정을 합친 뒤 앱을 다시 여세요.",
+        "Windows에서 npx를 찾지 못하면 command를 설치된 npx.cmd의 절대 경로로 지정하세요."
+      ],
+      "prerequisite": "Node.js와 npx. 고정 버전 mcp-remote가 로컬 프로세스로 실행됩니다.",
+      "downloadUrl": "https://nyangi.today/connect/clients/stdio.mcp.json"
+    },
+    {
+      "id": "codex",
+      "name": "Codex",
+      "group": "cli",
+      "docs": "https://learn.chatgpt.com/docs/extend/mcp",
+      "filename": "codex.toml",
+      "content": "[mcp_servers.oneul-nyangi]\nurl = \"https://nyangi.today/mcp\"\n",
+      "command": "codex mcp add oneul-nyangi --url https://nyangi.today/mcp",
+      "steps": [
+        "연결 명령을 실행하거나 ~/.codex/config.toml에 oneul-nyangi 항목을 합치세요.",
+        "새 세션 또는 MCP 설정의 다시 시작 후 공개 도구를 확인하세요."
+      ],
+      "downloadUrl": "https://nyangi.today/connect/clients/codex.toml"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "group": "cli",
+      "docs": "https://code.claude.com/docs/en/mcp",
+      "filename": "claude-code.mcp.json",
+      "content": "{\n  \"mcpServers\": {\n    \"oneul-nyangi\": {\n      \"type\": \"http\",\n      \"url\": \"https://nyangi.today/mcp\"\n    }\n  }\n}\n",
+      "command": "claude mcp add --transport http --scope user oneul-nyangi https://nyangi.today/mcp",
+      "steps": [
+        "연결 명령을 실행하거나 프로젝트 .mcp.json에 oneul-nyangi를 합치세요.",
+        "MCP 메뉴에서 연결 상태를 확인하세요."
+      ],
+      "downloadUrl": "https://nyangi.today/connect/clients/claude-code.mcp.json"
+    },
+    {
+      "id": "gemini-cli",
+      "name": "Gemini CLI",
+      "group": "cli",
+      "docs": "https://geminicli.com/docs/tools/mcp-server/",
+      "filename": "gemini-cli.settings.json",
+      "content": "{\n  \"mcpServers\": {\n    \"oneul-nyangi\": {\n      \"httpUrl\": \"https://nyangi.today/mcp\",\n      \"timeout\": 30000\n    }\n  }\n}\n",
+      "command": "gemini mcp add --scope user --transport http oneul-nyangi https://nyangi.today/mcp",
+      "steps": [
+        "연결 명령을 실행하거나 ~/.gemini/settings.json의 mcpServers에 oneul-nyangi를 합치세요.",
+        "Gemini 앱 계정 연결과 CLI 설정은 별도입니다."
+      ],
+      "downloadUrl": "https://nyangi.today/connect/clients/gemini-cli.settings.json"
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "group": "automation",
+      "docs": "https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp/",
+      "filename": "n8n-guide.md",
+      "steps": [
+        "AI Agent에 MCP Client Tool을 연결하고 Streamable HTTP를 선택하세요.",
+        "주소는 https://nyangi.today/mcp, 인증은 None, 도구는 공개 5개입니다.",
+        "MCP 도구 7개를 가져와 사용할 에이전트에 연결하세요. 앱 버전과 워크스페이스 권한에 따라 메뉴가 다를 수 있어요."
+      ],
+      "content": "# n8n — Oneul Nyangi\n\n1. AI Agent에 MCP Client Tool을 연결하고 Streamable HTTP를 선택하세요.\n2. 주소는 https://nyangi.today/mcp, 인증은 None, 도구는 공개 5개입니다.\n3. MCP 도구 7개를 가져와 사용할 에이전트에 연결하세요. 앱 버전과 워크스페이스 권한에 따라 메뉴가 다를 수 있어요.\n\n공개 읽기 전용 MCP입니다. 로그인이나 오늘냥이 API 키가 필요하지 않습니다. 모델 사용료와 외부 앱 계정은 별도입니다.\n",
+      "prerequisite": "Streamable HTTP를 지원하는 n8n 버전·워크스페이스 권한. AI Agent 사용 시 별도 모델 설정",
+      "downloadUrl": "https://nyangi.today/connect/clients/n8n-guide.md"
+    },
+    {
+      "id": "dify",
+      "name": "Dify",
+      "group": "automation",
+      "docs": "https://docs.dify.ai/en/cloud/use-dify/workspace/tools",
+      "filename": "dify-guide.md",
+      "steps": [
+        "Integrations → Tools → MCP에서 서버를 추가하세요.",
+        "URL은 https://nyangi.today/mcp, 식별자는 oneul-nyangi로 정하세요. 오늘냥이 인증은 필요하지 않습니다.",
+        "MCP 도구 7개를 가져와 사용할 에이전트에 연결하세요. 앱 버전과 워크스페이스 권한에 따라 메뉴가 다를 수 있어요."
+      ],
+      "content": "# Dify — Oneul Nyangi\n\n1. Integrations → Tools → MCP에서 서버를 추가하세요.\n2. URL은 https://nyangi.today/mcp, 식별자는 oneul-nyangi로 정하세요. 오늘냥이 인증은 필요하지 않습니다.\n3. MCP 도구 7개를 가져와 사용할 에이전트에 연결하세요. 앱 버전과 워크스페이스 권한에 따라 메뉴가 다를 수 있어요.\n\n공개 읽기 전용 MCP입니다. 로그인이나 오늘냥이 API 키가 필요하지 않습니다. 모델 사용료와 외부 앱 계정은 별도입니다.\n",
+      "prerequisite": "Dify 워크스페이스 도구 관리 권한",
+      "downloadUrl": "https://nyangi.today/connect/clients/dify-guide.md"
+    },
+    {
+      "id": "openwebui",
+      "name": "Open WebUI",
+      "group": "automation",
+      "docs": "https://docs.openwebui.com/features/extensibility/mcp/",
+      "filename": "openwebui-guide.md",
+      "steps": [
+        "관리자 설정 → Integrations → External Tool Servers에서 연결을 추가하세요.",
+        "Type은 MCP (Streamable HTTP), URL은 https://nyangi.today/mcp, 오늘냥이 인증은 없음으로 선택하세요.",
+        "MCP 도구 7개를 가져와 사용할 에이전트에 연결하세요. 앱 버전과 워크스페이스 권한에 따라 메뉴가 다를 수 있어요."
+      ],
+      "content": "# Open WebUI — Oneul Nyangi\n\n1. 관리자 설정 → Integrations → External Tool Servers에서 연결을 추가하세요.\n2. Type은 MCP (Streamable HTTP), URL은 https://nyangi.today/mcp, 오늘냥이 인증은 없음으로 선택하세요.\n3. MCP 도구 7개를 가져와 사용할 에이전트에 연결하세요. 앱 버전과 워크스페이스 권한에 따라 메뉴가 다를 수 있어요.\n\n공개 읽기 전용 MCP입니다. 로그인이나 오늘냥이 API 키가 필요하지 않습니다. 모델 사용료와 외부 앱 계정은 별도입니다.\n",
+      "prerequisite": "v0.6.31 이상 및 인스턴스 관리자 권한",
+      "downloadUrl": "https://nyangi.today/connect/clients/openwebui-guide.md"
+    }
+  ],
+  "referenceImplementation": "ABIS connector expansion 2026-10-30"
+}

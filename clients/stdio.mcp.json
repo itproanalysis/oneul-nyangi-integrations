@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "oneul-nyangi": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@0.15.2",
+        "https://nyangi.today/mcp",
+        "--transport",
+        "http-only"
+      ]
+    }
+  }
+}

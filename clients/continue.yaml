@@ -1,0 +1,7 @@
+name: Oneul Nyangi
+version: 1.1.0
+schema: v1
+mcpServers:
+  - name: oneul-nyangi
+    type: streamable-http
+    url: https://nyangi.today/mcp

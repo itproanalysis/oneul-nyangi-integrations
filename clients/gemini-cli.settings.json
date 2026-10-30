@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "oneul-nyangi": {
+      "httpUrl": "https://nyangi.today/mcp",
+      "timeout": 30000
+    }
+  }
+}

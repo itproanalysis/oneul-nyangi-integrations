@@ -1,0 +1,11 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "servers": {
+      "oneul-nyangi": {
+        "type": "remote",
+        "url": "https://nyangi.today/mcp"
+      }
+    }
+  }
+}

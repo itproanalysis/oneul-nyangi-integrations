@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "oneul-nyangi": {
+      "type": "streamable",
+      "url": "https://nyangi.today/mcp"
+    }
+  }
+}
