@@ -1,6 +1,6 @@
 {
-  "bundleVersion": "1.0.0",
-  "mcpVersion": "0.7.0",
+  "bundleVersion": "1.1.0",
+  "mcpVersion": "0.8.0",
   "checkedAt": "2026-10-30",
   "endpoint": "https://nyangi.today/mcp",
   "toolNames": [

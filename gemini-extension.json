@@ -1,6 +1,6 @@
 {
   "name": "oneul-nyangi",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "mcpServers": {
     "oneul-nyangi": {
       "httpUrl": "https://nyangi.today/mcp"

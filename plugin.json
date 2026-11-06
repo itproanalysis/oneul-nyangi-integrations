@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "oneul-nyangi",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Browse real cat photos and public diaries, explore breeds, and use cat age and feeding reference calculators.",
   "author": {
     "name": "GUNWOO KIM",
@@ -33,7 +33,7 @@
           "Search public cat diaries",
           "Read public cat profiles",
           "Convert cat age to human years",
-          "Estimate daily food calories and portions",
+          "Estimate dry, mixed and wet-only feeding portions",
           "Explore cat breeds and their public pages"
         ],
         "websiteURL": "https://nyangi.today/connect",
@@ -45,7 +45,7 @@
           "Find funny cat moments on Oneul Nyangi.",
           "Find Kei-chan's public diaries on Oneul Nyangi.",
           "How old is a five-year-old cat in human years?",
-          "Estimate daily food for a healthy 4 kg neutered adult cat.",
+          "Estimate wet-only food for a healthy 4 kg neutered adult cat using 70 kcal per 85 g pouch.",
           "Show me long-haired cat breeds on Oneul Nyangi."
         ],
         "brandColor": "#BE3E58",
@@ -102,6 +102,18 @@
               "prompt": "Show me the long-haired cat breeds available on Oneul Nyangi and link to their pages.",
               "tools_triggered": "list_cat_breeds",
               "expected_behavior": "Use category=long. Return the actual breed IDs, labels and original page links. Do not claim that every breed has public photos."
+            },
+            {
+              "description": "Calculate wet-only feeding from the label",
+              "prompt": "For a healthy 4 kg neutered adult cat eating only wet food, estimate the daily amount using 70 kcal per 85 g pouch. Answer in English.",
+              "tools_triggered": "estimate_cat_food",
+              "expected_behavior": "Use wet mode and both label values. Return about 238 kcal, 3.4 pouches or 289 g, plus the general reference disclaimer. Link to the public calculator and its prefilled settings when available."
+            },
+            {
+              "description": "Calculate wet and dry portions together",
+              "prompt": "For a healthy 4 kg neutered adult cat, combine one 70 kcal wet pouch with dry food at 3800 kcal/kg.",
+              "tools_triggered": "estimate_cat_food",
+              "expected_behavior": "Use mixed mode. Show one 70 kcal wet pouch and about 44 g of dry food, then provide the reference disclaimer and the calculator link."
             }
           ],
           "negative": [

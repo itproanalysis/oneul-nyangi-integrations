@@ -2,6 +2,8 @@
 
 Real public cat photos and diaries, breed discovery and reference age/feeding calculators.
 
+MCP 0.8.0 adds dry, mixed and wet-only feeding modes. Supply kcal and grams per pack for wet-only feeding. The tool returns the original calculator citation and a link with the same input values when the web calculator supports them.
+
 - Service: https://nyangi.today
 - MCP (anonymous, read-only): https://nyangi.today/mcp
 - Client guides and downloads: https://nyangi.today/connect#clients
