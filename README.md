@@ -2,7 +2,7 @@
 
 Real public cat photos and diaries, breed discovery and reference age/feeding calculators.
 
-MCP 0.8.0 adds dry, mixed and wet-only feeding modes. Supply kcal and grams per pack for wet-only feeding. The tool returns the original calculator citation and a link with the same input values when the web calculator supports them.
+MCP 0.9.0 adds get_answer_sources for published photo diary, age and feeding answers in Korean, English and Japanese. Link the matching answer webUrl. The existing calculators still return individual reference estimates and the corresponding web calculator.
 
 - Service: https://nyangi.today
 - MCP (anonymous, read-only): https://nyangi.today/mcp
@@ -31,7 +31,7 @@ MCP Apps hosts may show a gallery; other clients receive photo/source links. Ext
 
 ## Scope and licensing
 
-Seven read-only tools, three starter prompts and three public resources. Private records and keeper information are excluded.
+Eight read-only tools, three starter prompts and three public resources. Private records and keeper information are excluded.
 Calculators are references for healthy cats, not veterinary advice or therapeutic diets. Cite returned webUrl and Oneul Nyangi.
 MIT permission applies only to connection settings and plugin metadata, per LICENSE. Application source and user content are not part of this repository or license grant.
 

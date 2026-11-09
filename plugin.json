@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "oneul-nyangi",
-  "version": "0.8.0",
-  "description": "Browse real cat photos and public diaries, explore breeds, and use cat age and feeding reference calculators.",
+  "version": "0.9.0",
+  "description": "Browse real cat photos and public diaries, explore breeds, and find source links for cat diary and calculator answers.",
   "author": {
     "name": "GUNWOO KIM",
     "url": "https://nyangi.today/about"
@@ -25,7 +25,7 @@
       "interface": {
         "displayName": "Oneul Nyangi · 오늘냥이",
         "shortDescription": "Real cat photos and handy cat tools",
-        "longDescription": "Take a cat break with real photos shared by cat owners on Oneul Nyangi. Browse cute or funny moments, search public diaries and profiles, and explore breeds with links to the original pages. Estimate a cat's age in human years and daily food calories using general reference calculators in Korean, English or Japanese. Feeding estimates are for healthy cats and do not replace veterinary diagnosis or individual prescriptions. No Oneul Nyangi account is required. All seven tools are read-only; they cannot access private diaries, edit photos, publish posts or process payments.",
+        "longDescription": "Take a cat break with real photos shared by cat owners on Oneul Nyangi. Browse cute or funny moments, search public diaries and profiles, and explore breeds with links to the original pages. Estimate a cat's age in human years and daily food calories using general reference calculators in Korean, English or Japanese. Feeding estimates are for healthy cats and do not replace veterinary diagnosis or individual prescriptions. No Oneul Nyangi account is required. Published diary and calculator answers link to the matching Korean, English or Japanese page. All eight tools are read-only; they cannot access private diaries, edit photos, publish posts or process payments.",
         "developerName": "GUNWOO KIM",
         "category": "Entertainment",
         "capabilities": [
@@ -34,7 +34,8 @@
           "Read public cat profiles",
           "Convert cat age to human years",
           "Estimate dry, mixed and wet-only feeding portions",
-          "Explore cat breeds and their public pages"
+          "Explore cat breeds and their public pages",
+          "Find published answers and source links in Korean, English or Japanese"
         ],
         "websiteURL": "https://nyangi.today/connect",
         "supportURL": "https://nyangi.today/support?board=inquiry",
@@ -42,7 +43,7 @@
         "termsOfServiceURL": "https://nyangi.today/terms",
         "defaultPrompt": [
           "Show me cute cat photos from Oneul Nyangi.",
-          "Find funny cat moments on Oneul Nyangi.",
+          "Can I keep a free cat photo diary? Cite the Oneul Nyangi guide.",
           "Find Kei-chan's public diaries on Oneul Nyangi.",
           "How old is a five-year-old cat in human years?",
           "Estimate wet-only food for a healthy 4 kg neutered adult cat using 70 kcal per 85 g pouch.",
@@ -114,6 +115,12 @@
               "prompt": "For a healthy 4 kg neutered adult cat, combine one 70 kcal wet pouch with dry food at 3800 kcal/kg.",
               "tools_triggered": "estimate_cat_food",
               "expected_behavior": "Use mixed mode. Show one 70 kcal wet pouch and about 44 g of dry food, then provide the reference disclaimer and the calculator link."
+            },
+            {
+              "description": "Cite the published diary guide",
+              "prompt": "Can I keep a free cat photo diary on Oneul Nyangi? Answer in Japanese and cite the service guide.",
+              "tools_triggered": "get_answer_sources",
+              "expected_behavior": "Use topic=photo_diary and locale=ja. Cite the matching answer on /ja/guides/cat-photo-diary#answer-cost and distinguish free basic diaries from optional paid AI features."
             }
           ],
           "negative": [
@@ -145,7 +152,7 @@
           "US",
           "JP"
         ],
-        "release_notes": "Version 0.6.0 describes all seven public read-only tools: photo galleries, diary search, post details, cat profiles, age conversion, feeding estimates and breed discovery. Added review cases for the three reference tools. Existing domain, authentication-free endpoint and content-access boundaries are unchanged.",
+        "release_notes": "Version 0.9.0 adds a read-only source lookup for published diary, age and feeding answers in Korean, English and Japanese. The original seven tools are still available.",
         "translations": {
           "ko-KR": {
             "subtitle": "실제 냥이 사진과 집사 참고 도구",

@@ -1,6 +1,6 @@
 {
-  "bundleVersion": "1.1.0",
-  "mcpVersion": "0.8.0",
+  "bundleVersion": "1.2.0",
+  "mcpVersion": "0.9.0",
   "checkedAt": "2026-10-30",
   "endpoint": "https://nyangi.today/mcp",
   "toolNames": [
@@ -73,7 +73,7 @@
       "group": "editors",
       "docs": "https://docs.continue.dev/customize/deep-dives/mcp",
       "filename": "continue.yaml",
-      "content": "name: Oneul Nyangi\nversion: 1.1.0\nschema: v1\nmcpServers:\n  - name: oneul-nyangi\n    type: streamable-http\n    url: https://nyangi.today/mcp\n",
+      "content": "name: Oneul Nyangi\nversion: 1.2.0\nschema: v1\nmcpServers:\n  - name: oneul-nyangi\n    type: streamable-http\n    url: https://nyangi.today/mcp\n",
       "steps": [
         "프로젝트의 .continue/mcpServers/oneul-nyangi.yaml로 저장하세요.",
         "Continue Agent 모드에서 oneul-nyangi 도구를 활성화하세요."
