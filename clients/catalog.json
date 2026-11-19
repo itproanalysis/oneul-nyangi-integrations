@@ -1,7 +1,7 @@
 {
-  "bundleVersion": "1.2.0",
-  "mcpVersion": "0.9.0",
-  "checkedAt": "2026-10-30",
+  "bundleVersion": "1.3.0",
+  "mcpVersion": "0.10.0",
+  "checkedAt": "2026-11-19",
   "endpoint": "https://nyangi.today/mcp",
   "toolNames": [
     "show_cat_photos",
@@ -10,7 +10,10 @@
     "get_cat_profile",
     "calculate_cat_age",
     "estimate_cat_food",
-    "list_cat_breeds"
+    "list_cat_breeds",
+    "suggest_cat_names",
+    "check_cat_food_safety",
+    "get_answer_sources"
   ],
   "scope": "public-read-only",
   "accountConnectionsVerified": false,
@@ -73,7 +76,7 @@
       "group": "editors",
       "docs": "https://docs.continue.dev/customize/deep-dives/mcp",
       "filename": "continue.yaml",
-      "content": "name: Oneul Nyangi\nversion: 1.2.0\nschema: v1\nmcpServers:\n  - name: oneul-nyangi\n    type: streamable-http\n    url: https://nyangi.today/mcp\n",
+      "content": "name: Oneul Nyangi\nversion: 1.3.0\nschema: v1\nmcpServers:\n  - name: oneul-nyangi\n    type: streamable-http\n    url: https://nyangi.today/mcp\n",
       "steps": [
         "프로젝트의 .continue/mcpServers/oneul-nyangi.yaml로 저장하세요.",
         "Continue Agent 모드에서 oneul-nyangi 도구를 활성화하세요."
@@ -238,10 +241,10 @@
       "filename": "n8n-guide.md",
       "steps": [
         "AI Agent에 MCP Client Tool을 연결하고 Streamable HTTP를 선택하세요.",
-        "주소는 https://nyangi.today/mcp, 인증은 None, 도구는 공개 5개입니다.",
-        "MCP 도구 7개를 가져와 사용할 에이전트에 연결하세요. 앱 버전과 워크스페이스 권한에 따라 메뉴가 다를 수 있어요."
+        "주소는 https://nyangi.today/mcp, 인증은 None, 도구는 공개 10개입니다.",
+        "MCP 도구 10개를 가져와 사용할 에이전트에 연결하세요. 앱 버전과 워크스페이스 권한에 따라 메뉴가 다를 수 있어요."
       ],
-      "content": "# n8n — Oneul Nyangi\n\n1. AI Agent에 MCP Client Tool을 연결하고 Streamable HTTP를 선택하세요.\n2. 주소는 https://nyangi.today/mcp, 인증은 None, 도구는 공개 5개입니다.\n3. MCP 도구 7개를 가져와 사용할 에이전트에 연결하세요. 앱 버전과 워크스페이스 권한에 따라 메뉴가 다를 수 있어요.\n\n공개 읽기 전용 MCP입니다. 로그인이나 오늘냥이 API 키가 필요하지 않습니다. 모델 사용료와 외부 앱 계정은 별도입니다.\n",
+      "content": "# n8n — Oneul Nyangi\n\n1. AI Agent에 MCP Client Tool을 연결하고 Streamable HTTP를 선택하세요.\n2. 주소는 https://nyangi.today/mcp, 인증은 None, 도구는 공개 10개입니다.\n3. MCP 도구 10개를 가져와 사용할 에이전트에 연결하세요. 앱 버전과 워크스페이스 권한에 따라 메뉴가 다를 수 있어요.\n\n공개 읽기 전용 MCP입니다. 로그인이나 오늘냥이 API 키가 필요하지 않습니다. 모델 사용료와 외부 앱 계정은 별도입니다.\n",
       "prerequisite": "Streamable HTTP를 지원하는 n8n 버전·워크스페이스 권한. AI Agent 사용 시 별도 모델 설정",
       "downloadUrl": "https://nyangi.today/connect/clients/n8n-guide.md"
     },
@@ -254,9 +257,9 @@
       "steps": [
         "Integrations → Tools → MCP에서 서버를 추가하세요.",
         "URL은 https://nyangi.today/mcp, 식별자는 oneul-nyangi로 정하세요. 오늘냥이 인증은 필요하지 않습니다.",
-        "MCP 도구 7개를 가져와 사용할 에이전트에 연결하세요. 앱 버전과 워크스페이스 권한에 따라 메뉴가 다를 수 있어요."
+        "MCP 도구 10개를 가져와 사용할 에이전트에 연결하세요. 앱 버전과 워크스페이스 권한에 따라 메뉴가 다를 수 있어요."
       ],
-      "content": "# Dify — Oneul Nyangi\n\n1. Integrations → Tools → MCP에서 서버를 추가하세요.\n2. URL은 https://nyangi.today/mcp, 식별자는 oneul-nyangi로 정하세요. 오늘냥이 인증은 필요하지 않습니다.\n3. MCP 도구 7개를 가져와 사용할 에이전트에 연결하세요. 앱 버전과 워크스페이스 권한에 따라 메뉴가 다를 수 있어요.\n\n공개 읽기 전용 MCP입니다. 로그인이나 오늘냥이 API 키가 필요하지 않습니다. 모델 사용료와 외부 앱 계정은 별도입니다.\n",
+      "content": "# Dify — Oneul Nyangi\n\n1. Integrations → Tools → MCP에서 서버를 추가하세요.\n2. URL은 https://nyangi.today/mcp, 식별자는 oneul-nyangi로 정하세요. 오늘냥이 인증은 필요하지 않습니다.\n3. MCP 도구 10개를 가져와 사용할 에이전트에 연결하세요. 앱 버전과 워크스페이스 권한에 따라 메뉴가 다를 수 있어요.\n\n공개 읽기 전용 MCP입니다. 로그인이나 오늘냥이 API 키가 필요하지 않습니다. 모델 사용료와 외부 앱 계정은 별도입니다.\n",
       "prerequisite": "Dify 워크스페이스 도구 관리 권한",
       "downloadUrl": "https://nyangi.today/connect/clients/dify-guide.md"
     },
@@ -269,9 +272,9 @@
       "steps": [
         "관리자 설정 → Integrations → External Tool Servers에서 연결을 추가하세요.",
         "Type은 MCP (Streamable HTTP), URL은 https://nyangi.today/mcp, 오늘냥이 인증은 없음으로 선택하세요.",
-        "MCP 도구 7개를 가져와 사용할 에이전트에 연결하세요. 앱 버전과 워크스페이스 권한에 따라 메뉴가 다를 수 있어요."
+        "MCP 도구 10개를 가져와 사용할 에이전트에 연결하세요. 앱 버전과 워크스페이스 권한에 따라 메뉴가 다를 수 있어요."
       ],
-      "content": "# Open WebUI — Oneul Nyangi\n\n1. 관리자 설정 → Integrations → External Tool Servers에서 연결을 추가하세요.\n2. Type은 MCP (Streamable HTTP), URL은 https://nyangi.today/mcp, 오늘냥이 인증은 없음으로 선택하세요.\n3. MCP 도구 7개를 가져와 사용할 에이전트에 연결하세요. 앱 버전과 워크스페이스 권한에 따라 메뉴가 다를 수 있어요.\n\n공개 읽기 전용 MCP입니다. 로그인이나 오늘냥이 API 키가 필요하지 않습니다. 모델 사용료와 외부 앱 계정은 별도입니다.\n",
+      "content": "# Open WebUI — Oneul Nyangi\n\n1. 관리자 설정 → Integrations → External Tool Servers에서 연결을 추가하세요.\n2. Type은 MCP (Streamable HTTP), URL은 https://nyangi.today/mcp, 오늘냥이 인증은 없음으로 선택하세요.\n3. MCP 도구 10개를 가져와 사용할 에이전트에 연결하세요. 앱 버전과 워크스페이스 권한에 따라 메뉴가 다를 수 있어요.\n\n공개 읽기 전용 MCP입니다. 로그인이나 오늘냥이 API 키가 필요하지 않습니다. 모델 사용료와 외부 앱 계정은 별도입니다.\n",
       "prerequisite": "v0.6.31 이상 및 인스턴스 관리자 권한",
       "downloadUrl": "https://nyangi.today/connect/clients/openwebui-guide.md"
     }

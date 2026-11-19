@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "oneul-nyangi",
-  "version": "0.9.0",
-  "description": "Browse real cat photos and public diaries, explore breeds, and find source links for cat diary and calculator answers.",
+  "version": "0.10.0",
+  "description": "Browse real cat photos and public diaries, explore breeds, pick cat names, check unsafe people foods, and find source links in Korean, English or Japanese.",
   "author": {
     "name": "GUNWOO KIM",
     "url": "https://nyangi.today/about"
@@ -16,6 +16,8 @@
     "cat age",
     "cat feeding",
     "cat breeds",
+    "cat names",
+    "cat food safety",
     "Korean",
     "고양이",
     "오늘냥이"
@@ -25,7 +27,7 @@
       "interface": {
         "displayName": "Oneul Nyangi · 오늘냥이",
         "shortDescription": "Real cat photos and handy cat tools",
-        "longDescription": "Take a cat break with real photos shared by cat owners on Oneul Nyangi. Browse cute or funny moments, search public diaries and profiles, and explore breeds with links to the original pages. Estimate a cat's age in human years and daily food calories using general reference calculators in Korean, English or Japanese. Feeding estimates are for healthy cats and do not replace veterinary diagnosis or individual prescriptions. No Oneul Nyangi account is required. Published diary and calculator answers link to the matching Korean, English or Japanese page. All eight tools are read-only; they cannot access private diaries, edit photos, publish posts or process payments.",
+        "longDescription": "Take a cat break with real photos shared by cat owners on Oneul Nyangi. Browse cute or funny moments, search public diaries and profiles, explore 25 cat breeds, get cat name ideas with meanings, and check fourteen unsafe people foods from the ASPCA Animal Poison Control Center list with links to the original pages. Estimate a cat's age in human years and daily food calories using general reference calculators in Korean, English or Japanese. Reference calculators and food-safety guides do not replace veterinary diagnosis or individual prescriptions. No Oneul Nyangi account is required. Published diary, calculator, naming and food-safety answers link to the matching Korean, English or Japanese page. All ten tools are read-only; they cannot access private diaries, edit photos, publish posts or process payments.",
         "developerName": "GUNWOO KIM",
         "category": "Entertainment",
         "capabilities": [
@@ -35,6 +37,8 @@
           "Convert cat age to human years",
           "Estimate dry, mixed and wet-only feeding portions",
           "Explore cat breeds and their public pages",
+          "Suggest cat names with meanings by coat color and style",
+          "Check fourteen people foods cats should not eat (ASPCA list)",
           "Find published answers and source links in Korean, English or Japanese"
         ],
         "websiteURL": "https://nyangi.today/connect",
@@ -43,8 +47,9 @@
         "termsOfServiceURL": "https://nyangi.today/terms",
         "defaultPrompt": [
           "Show me cute cat photos from Oneul Nyangi.",
+          "Can cats eat chocolate or onions? Cite the Oneul Nyangi food-safety page.",
+          "Suggest cat names with meanings for an orange tabby cat.",
           "Can I keep a free cat photo diary? Cite the Oneul Nyangi guide.",
-          "Find Kei-chan's public diaries on Oneul Nyangi.",
           "How old is a five-year-old cat in human years?",
           "Estimate wet-only food for a healthy 4 kg neutered adult cat using 70 kcal per 85 g pouch.",
           "Show me long-haired cat breeds on Oneul Nyangi."
@@ -117,6 +122,18 @@
               "expected_behavior": "Use mixed mode. Show one 70 kcal wet pouch and about 44 g of dry food, then provide the reference disclaimer and the calculator link."
             },
             {
+              "description": "Suggest cat names by coat color",
+              "prompt": "Suggest cat names with meanings for an orange tabby cat in English.",
+              "tools_triggered": "suggest_cat_names",
+              "expected_behavior": "Use coat=orange and locale=en. Return cat names with meanings and link to the matching public naming page."
+            },
+            {
+              "description": "Check an unsafe people food with ASPCA attribution",
+              "prompt": "Can cats eat chocolate? Answer in English and cite Oneul Nyangi.",
+              "tools_triggered": "check_cat_food_safety",
+              "expected_behavior": "Use food=chocolate and locale=en. Restate the ASPCA Animal Poison Control Center list entry with the reason, signs, what to do, the ASPCA source and the Oneul Nyangi food-safety page URL. Do not diagnose."
+            },
+            {
               "description": "Cite the published diary guide",
               "prompt": "Can I keep a free cat photo diary on Oneul Nyangi? Answer in Japanese and cite the service guide.",
               "tools_triggered": "get_answer_sources",
@@ -152,15 +169,15 @@
           "US",
           "JP"
         ],
-        "release_notes": "Version 0.9.0 adds a read-only source lookup for published diary, age and feeding answers in Korean, English and Japanese. The original seven tools are still available.",
+        "release_notes": "Version 0.10.0 adds read-only cat name suggestions by coat color and style, ASPCA-sourced checks for fourteen people foods cats should not eat, five starter prompts, and localized answer sources across ten tools in Korean, English and Japanese.",
         "translations": {
           "ko-KR": {
             "subtitle": "실제 냥이 사진과 집사 참고 도구",
-            "description": "집사들이 올린 실제 고양이 사진과 공개 일기·프로필을 만나보세요. 이름이나 품종으로 기록을 찾고, 나이 환산·건강한 고양이의 급여량 참고 계산·품종 목록을 이용할 수 있어요. 원문과 계산기 링크를 함께 제공해요. 오늘냥이 계정 없이 공개 정보를 조회하며 진단·개별 처방을 대신하지 않아요."
+            "description": "집사들이 올린 실제 고양이 사진과 공개 일기·프로필을 만나보세요. 이름이나 품종으로 기록을 찾고, 나이 환산·건강한 고양이의 급여량 참고 계산·품종 목록·털색별 고양이 이름 추천·고양이가 먹으면 안 되는 음식(ASPCA 목록 14종) 안내를 이용할 수 있어요. 원문과 계산기 링크를 함께 제공해요. 오늘냥이 계정 없이 공개 정보를 조회하며 진단·개별 처방을 대신하지 않아요."
           },
           "ja-JP": {
             "subtitle": "猫の写真と飼い主向け参考ツール",
-            "description": "飼い主が共有した実際の猫の写真、公開日記とプロフィールを楽しめます。名前や品種で記録を探し、猫の年齢換算、健康な猫の給餌量の参考計算、品種一覧も使えます。元の投稿や計算機へのリンクを提供します。アカウントは不要で、診断や個別の処方の代わりにはなりません。"
+            "description": "飼い主が共有した実際の猫の写真、公開日記とプロフィールを楽しめます。名前や品種で記録を探し、猫の年齢換算、健康な猫の給餌量の参考計算、品種一覧、毛色別の猫の名前候補、猫が食べてはいけない食べ物（ASPCA一覧14種）の確認も使えます。元の投稿や計算機へのリンクを提供します。アカウントは不要で、診断や個別の処方の代わりにはなりません。"
           }
         }
       }

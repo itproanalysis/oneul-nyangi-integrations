@@ -1,17 +1,18 @@
 # Oneul Nyangi public integrations
 
-Real public cat photos and diaries, breed discovery and reference age/feeding calculators.
+Real public cat photos and diaries, breed discovery, cat name ideas, ASPCA-sourced checks for fourteen unsafe people foods, and reference age/feeding calculators.
 
-MCP 0.9.0 adds get_answer_sources for published photo diary, age and feeding answers in Korean, English and Japanese. Link the matching answer webUrl. The existing calculators still return individual reference estimates and the corresponding web calculator.
+MCP 0.10.0 covers all ten read-only tools (`show_cat_photos`, `search_public_content`, `get_public_post`, `get_cat_profile`, `calculate_cat_age`, `estimate_cat_food`, `list_cat_breeds`, `suggest_cat_names`, `check_cat_food_safety`, `get_answer_sources`), five starter prompts, and three public resources in Korean, English and Japanese. Link each returned `webUrl` (and `source` for food-safety answers).
 
-- Service: https://nyangi.today
+- Service: https://nyangi.today ([English](https://nyangi.today/en/home) · [日本語](https://nyangi.today/ja/home))
 - MCP (anonymous, read-only): https://nyangi.today/mcp
-- Client guides and downloads: https://nyangi.today/connect#clients
+- Plain HTTP OpenAPI 3.1 (site builders, custom GPT actions, no key): https://nyangi.today/api/public/v1/openapi.json
+- Client guides and downloads: https://nyangi.today/en/connect#clients ([한국어](https://nyangi.today/connect#clients) · [日本語](https://nyangi.today/ja/connect#clients))
 - Public service and citation facts: https://nyangi.today/en/press
 
 ## Claude Code
 
-/plugin install oneul-nyangi --marketplace itproanalysis/oneul-nyangi-integrations
+`/plugin install oneul-nyangi --marketplace itproanalysis/oneul-nyangi-integrations`
 
 Or clone this repository and run `claude --plugin-dir ./oneul-nyangi-integrations`.
 Review the client trust prompt before enabling. A repository installation is not an official directory approval.
@@ -24,15 +25,15 @@ Review the extension confirmation. Alternatively clone and use `gemini extension
 
 ## Other clients
 
-The clients folder contains 19 native connection profiles/guides for editors, CLI tools, local chats and automation.
-Merge only the oneul-nyangi entry; preserve other servers, account settings and approvals.
-The optional stdio profile runs pinned mcp-remote@0.15.2 via Node.js/npx; prefer direct HTTP.
+The `clients` folder contains 19 native connection profiles/guides for editors, CLI tools, local chats and automation.
+Merge only the `oneul-nyangi` entry; preserve other servers, account settings and approvals.
+The optional stdio profile runs pinned `mcp-remote@0.15.2` via Node.js/npx; prefer direct HTTP.
 MCP Apps hosts may show a gallery; other clients receive photo/source links. External model/app fees are separate.
 
 ## Scope and licensing
 
-Eight read-only tools, three starter prompts and three public resources. Private records and keeper information are excluded.
-Calculators are references for healthy cats, not veterinary advice or therapeutic diets. Cite returned webUrl and Oneul Nyangi.
-MIT permission applies only to connection settings and plugin metadata, per LICENSE. Application source and user content are not part of this repository or license grant.
+Ten read-only tools, five starter prompts and three public resources. Private records and keeper information are excluded.
+Calculators and ASPCA-sourced food-safety checks are general references, not veterinary advice or therapeutic diets. Cite returned `webUrl` and Oneul Nyangi.
+MIT permission applies only to connection settings and plugin metadata, per `LICENSE`. Application source and user content are not part of this repository or license grant.
 
 See the live site for terms and privacy. No credentials, application backend source, private customer content or write tools are included.
